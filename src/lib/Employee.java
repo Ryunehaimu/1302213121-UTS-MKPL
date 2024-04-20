@@ -35,20 +35,6 @@ public class Employee {
 		FEMALE
 	}
 
-	class Address {
-		private String street;
-		private String city;
-		private String postalCode;
-		private String country;
-
-		public Address(String street, String city, String postalCode, String country) {
-			this.street = street;
-			this.city = city;
-			this.postalCode = postalCode;
-			this.country = country;
-		}
-	}
-
 	public Employee(String employeeId, String firstName, String lastName, String idNumber, Address address,
 			int yearJoined, int monthJoined, int dayJoined, boolean isForeigner, Gender gender) {
 		this.employeeId = employeeId;
