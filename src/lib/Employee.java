@@ -32,53 +32,6 @@ public class Employee {
 		FEMALE
 	}
 
-	public class EmployeeIdentity {
-		private String employeeId;
-		private String firstName;
-		private String lastName;
-		private String idNumber;
-
-		public EmployeeIdentity(String employeeId, String firstName, String lastName, String idNumber) {
-			this.employeeId = employeeId;
-			this.firstName = firstName;
-			this.lastName = lastName;
-			this.idNumber = idNumber;
-		}
-
-		public String getEmployeeId() {
-			return employeeId;
-		}
-
-		public void setEmployeeId(String employeeId) {
-			this.employeeId = employeeId;
-		}
-
-		public String getFirstName() {
-			return firstName;
-		}
-
-		public void setFirstName(String firstName) {
-			this.firstName = firstName;
-		}
-
-		public String getLastName() {
-			return lastName;
-		}
-
-		public void setLastName(String lastName) {
-			this.lastName = lastName;
-		}
-
-		public String getIdNumber() {
-			return idNumber;
-		}
-
-		public void setIdNumber(String idNumber) {
-			this.idNumber = idNumber;
-		}
-
-	}
-
 	public Employee(EmployeeIdentity Identity, Address address,
 			int yearJoined, int monthJoined, int dayJoined, boolean isForeigner, Gender gender) {
 		this.Identity = Identity;
@@ -130,7 +83,7 @@ public class Employee {
 
 	public void setSpouse(String spouseName, EmployeeIdentity Identity) {
 		this.spouseName = spouseName;
-		this.spouseIdNumber = Identity.idNumber;
+		this.spouseIdNumber = Identity.getIdNumber();
 	}
 
 	public void addChild(String childName, String childIdNumber) {
